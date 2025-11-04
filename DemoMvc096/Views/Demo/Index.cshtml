@@ -1,5 +1,11 @@
 @{
-ViewData["Title"] = "Index";
+    ViewData["Title"] = "Demo ViewBag / ViewData / TempData";
 }
-<h2>Index</h2>
-<p>Hello what up bro!</p>
+
+<h2>@ViewData["Title"]</h2>
+
+<p><strong>ViewData:</strong> @ViewData["Message1"]</p>
+<p><strong>ViewBag:</strong> @ViewBag.Message2</p>
+<p><strong>TempData:</strong> @TempData["Message3"]</p>
+
+<a href="/Demo/RedirectToTemp" class="btn btn-primary">Chuyển hướng đến ShowTempData (Test TempData)</a>

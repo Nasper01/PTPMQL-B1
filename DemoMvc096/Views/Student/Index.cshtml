@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Thông tin sinh viên";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" action="/Student/Index" style="max-width:400px;">
+    <div style="margin-bottom:10px;">
+        <label for="Name">Họ tên:</label><br />
+        <input type="text" id="Name" name="Name" required class="form-control" />
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label for="Age">Tuổi:</label><br />
+        <input type="number" id="Age" name="Age" required class="form-control" />
+    </div>
+
+    <div style="margin-bottom:10px;">
+        <label for="ClassName">Lớp:</label><br />
+        <input type="text" id="ClassName" name="ClassName" required class="form-control" />
+    </div>
+
+    <button type="submit">Gửi dữ liệu</button>
+</form>
+
+@if (ViewBag.Name != null)
+{
+    <hr />
+    <h3>Kết quả:</h3>
+    <p><strong>Họ tên:</strong> @ViewBag.Name</p>
+    <p><strong>Tuổi:</strong> @ViewBag.Age</p>
+    <p><strong>Lớp:</strong> @ViewBag.ClassName</p>
+}

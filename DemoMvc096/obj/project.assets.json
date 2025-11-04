@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DemoMvc096\\DemoMvc096\\DemoMvc096.csproj",
+      "projectUniqueName": "D:\\PTPMQL B1\\DemoMvc096\\DemoMvc096.csproj",
       "projectName": "DemoMvc096",
-      "projectPath": "D:\\DemoMvc096\\DemoMvc096\\DemoMvc096.csproj",
+      "projectPath": "D:\\PTPMQL B1\\DemoMvc096\\DemoMvc096.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\DemoMvc096\\DemoMvc096\\obj\\",
+      "outputPath": "D:\\PTPMQL B1\\DemoMvc096\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
