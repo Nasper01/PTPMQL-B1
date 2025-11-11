@@ -1,25 +1,25 @@
 ﻿@{
-    ViewData["Title"] = "Nội dung buổi học số 3";
+    ViewData["Title"] = "Nhập thông tin người dùng";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h2>@ViewData["Title"]</h2>
 
-<h2>1. Cách tạo project .NET MVC</h2>
+<form method="post" asp-controller="Home" asp-action="Index" style="max-width:400px;">
+    <div>
+        <label for="userName">Tên của bạn:</label><br />
+        <input type="text" id="userName" name="userName" required style="width:100%; padding:8px; margin:6px 0;" />
+    </div>
 
-<h2>2. Namespace là gì, cách đặt tên</h2>
+    <div>
+        <label for="yearOfBirth">Năm sinh:</label><br />
+        <input type="number" id="yearOfBirth" name="yearOfBirth" required min="1900" max="@DateTime.Now.Year"
+               style="width:100%; padding:8px; margin:6px 0;" />
+    </div>
 
-<h2>3. Cách tạo Controller và View</h2>
+    <button type="submit" style="padding:8px 12px;">Gửi</button>
+</form>
 
-<h2>4. Định tuyến (Route) trong MVC</h2>
-
-<h2>5. IActionResult là gì?</h2>
-<p>Các kiểu trả về:</p>
-
-<ul>
-    <li><a href="/Home/Index">ViewResult</a></li>
-    <li><a href="/Home/RedirectExample">RedirectResult</a></li>
-    <li><a href="/Home/RedirectToActionExample">RedirectToActionResult</a></li>
-    <li><a href="/Home/JsonExample">JsonResult</a></li>
-    <li><a href="/Home/FileExample">FileResult</a></li>
-    <li><a href="/Home/StatusCodeExample">StatusCodeResult</a></li>
-</ul>
+@if (ViewBag.Message != null)
+{
+    <h3 style="color:green; margin-top:20px;">@ViewBag.Message</h3>
+}
